@@ -32,7 +32,7 @@
 <v t="2014fall.20141212095015.1777" a="EM"><vh>class Midterm</vh>
 <v t="amd.20150503182609.1"><vh>__init__</vh></v>
 <v t="amd.20150503173602.1"><vh>index</vh></v>
-<v t="amd.20150503183542.1"><vh>spur2</vh></v>
+<v t="amd.20150503183542.1"><vh>spur</vh></v>
 <v t="amd.20150503183546.1"><vh>spuraction</vh></v>
 <v t="amd.20150503185058.1"><vh>drawspur</vh></v>
 <v t="amd.20150503185210.1"><vh>drawspuraction</vh></v>
@@ -1747,8 +1747,8 @@ def index(self):
     &lt;meta http-equiv="content-type" content="text/html;charset=utf-8"&gt;
     &lt;/head&gt;
     &lt;body&gt;
-    &lt;a href="spur"&gt;spur&lt;/a&gt;&lt;br /&gt;
-    &lt;a href="drawspur"&gt;drawspur&lt;/a&gt;&lt;br /&gt;
+    &lt;a href="spur2"&gt;spur&lt;/a&gt;&lt;br /&gt;
+    &lt;a href="drawspur2"&gt;drawspur&lt;/a&gt;&lt;br /&gt;
     &lt;/body&gt;
     &lt;/html&gt;
     '''
@@ -1795,7 +1795,7 @@ http://2015cdmidterm-scrum2mdetw.rhcloud.com/</t>
 <t tx="amd.20150503183108.1"></t>
 <t tx="amd.20150503183542.1">@cherrypy.expose
 # N 為齒數, M 為模數, P 為壓力角
-def spur2(self, N=20, M=5, P=15):
+def spur(self, N=20, M=5, P=15):
     outstring = '''
 &lt;!DOCTYPE html&gt; 
 &lt;html&gt;
@@ -1923,10 +1923,7 @@ brython();
 
     return outstring</t>
 <t tx="amd.20150503185513.1"></t>
-<t tx="office.20150504093049.1"># 以 @ 開頭的 cherrypy.expose 為 decorator, 用來表示隨後的成員方法, 可以直接讓使用者以 URL 連結執行
-@cherrypy.expose
-# index 方法為 CherryPy 各類別成員方法中的內建(default)方法, 當使用者執行時未指定方法, 系統將會優先執行 index 方法
-# 有 self 的方法為類別中的成員方法, Python 程式透過此一 self 在各成員方法間傳遞物件內容
+<t tx="office.20150504093049.1">
 def index2(self, toprint="40223220"):
     return toprint
 </t>
